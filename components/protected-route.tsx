@@ -21,7 +21,7 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
       if (!user) {
         router.push(`/login?redirect=${pathname}`)
       } else if (allowedRoles && !allowedRoles.includes(user.role)) {
-        // Redirect to appropriate dashboard based on role
+        // Redirect to perticular  dashboard based on role
         if (user.role === "manager") {
           router.push("/manager")
         } else {

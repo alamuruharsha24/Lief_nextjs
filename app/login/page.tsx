@@ -66,7 +66,7 @@ export default function LoginPage() {
         description: `Welcome, ${user.displayName || user.email}!`,
       })
 
-      // Redirect based on role
+      // Redirect based on role 
       if (user.role === "manager") {
         router.push("/manager")
       } else {

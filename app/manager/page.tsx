@@ -25,7 +25,7 @@ export default function ManagerPage() {
       if (!user) return
 
       try {
-        // Get today's date at midnight
+        // Get today's date at mid_night
         const today = new Date()
         today.setHours(0, 0, 0, 0)
 
@@ -53,7 +53,7 @@ export default function ManagerPage() {
     }
 
     fetchClockInData()
-    // Set up a refresh interval (every 5 minutes)
+    // Set up a refresh interval - every 5 minutes ;
     const intervalId = setInterval(fetchClockInData, 5 * 60 * 1000)
 
     return () => clearInterval(intervalId)
